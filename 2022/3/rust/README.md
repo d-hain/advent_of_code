@@ -4,6 +4,13 @@
 
 In the file `first_solution.rs` there is my initial solution of the puzzle.
 
-- Size: TODO
-- Time TODO
+- Part 1
+  - Size: 1071 byte
+  - Time
+    - real    0m0.063s
+    - user    0m0.034s
+    - sys     0m0.000s
 
+- Part 2
+  - Size: TODO
+  - Time
