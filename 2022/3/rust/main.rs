@@ -40,14 +40,14 @@ impl FirstSolution {
 
         let mut priorities_sum = 0;
         for line in lines {
-            let (comp1, comp2) = line.split_at(line.len() / 2);
+            let (compartment1, compartment2) = line.split_at(line.len() / 2);
 
-            let a = comp1.chars().collect::<Vec<char>>();
-            let b = comp2.chars().collect::<Vec<char>>();
+            let compartment1_chars = compartment1.chars().collect::<Vec<char>>();
+            let compartment2_chars = compartment2.chars().collect::<Vec<char>>();
 
-            for i in 0..a.len() {
-                if a.contains(&b[i]) {
-                    priorities_sum += &b[i].to_string().priority();
+            for i in 0..compartment1_chars.len() {
+                if compartment1_chars.contains(&compartment2_chars[i]) {
+                    priorities_sum += &compartment2_chars[i].to_string().priority();
                     break;
                 }
             }
