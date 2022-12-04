@@ -1,4 +1,4 @@
-# This is my solution to AoC 2022 Day 3
+# This is my solution to AoC 2022 Day 4
 
 ## First Solution
 
