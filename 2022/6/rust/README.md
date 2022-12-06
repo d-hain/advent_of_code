@@ -1,9 +1,8 @@
-# This is my solution to AoC 2022 Day 4
+# This is my solution to AoC 2022 Day 6
 
 ## First Solution
 
-In the file `first_solution_part1.rs` there is my initial solution of part 1 of the puzzle.
-And the same for `first_solution_part2.rs`.
+In the file `first_solution.rs` there is my initial solution of the puzzle.
 
 - Part 1
   - Size: 919 byte
