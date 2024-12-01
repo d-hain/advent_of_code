@@ -1,4 +1,4 @@
-NAME=area-raiders
+NAME=day-01
 BUILD_DIR=build
 
 BUILD_FLAGS=-lld -vet-shadowing -vet-using-stmt -vet-using-param -vet-style
