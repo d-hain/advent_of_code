@@ -102,7 +102,6 @@ split_levels :: proc(report: string) -> (levels: [dynamic]u8) {
     level_builder := str.builder_make()
 
     for char in report {
-
         switch {
         case is_digit(char):
             str.write_rune(&level_builder, char)
