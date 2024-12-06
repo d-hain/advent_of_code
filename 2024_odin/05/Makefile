@@ -1,4 +1,4 @@
-NAME=day-02
+NAME=day-05
 BUILD_DIR=build
 
 BUILD_FLAGS=-lld -vet-shadowing -vet-using-stmt -vet-using-param -vet-style
