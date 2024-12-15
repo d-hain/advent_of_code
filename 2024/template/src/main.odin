@@ -1,10 +1,7 @@
 package main
 
 import "core:fmt"
-import "core:slice"
 import "core:os"
-import "core:math"
-import "core:sort"
 import str "core:strings"
 
 main :: proc() {
