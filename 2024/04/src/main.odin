@@ -141,7 +141,7 @@ get :: proc(input: string, idx: int) -> rune {
 }
 
 read_input :: proc() -> string {
-    input, err := os.read_entire_file_from_filename_or_err("input.txt")
+    input, err := os.read_entire_file_from_filename_or_err("example.txt")
     if err != nil {
         fmt.eprintln("Error reading \"input.txt\":", err)
         os.exit(1)

@@ -24,8 +24,8 @@ main :: proc() {
     // +1 because of newlines
     line_length := len(str.split_lines(input_str)[0]) + 1
 
-    //fmt.println("Part 1: Finished with", part_1(input, input_str, line_length), "steps.")
-    fmt.println("Part 2: Possible obstruction positions: ", part_2(input, input_str, line_length))
+    fmt.println("Part 1: Finished with", part_1(input, input_str, line_length), "steps.")
+    //fmt.println("Part 2: Possible obstruction positions: ", part_2(input, input_str, line_length))
 }
 
 part_2 :: proc(input: []u8, input_str: string, line_length: int) -> int {
