@@ -1,7 +1,7 @@
 NAME=day-01
 BUILD_DIR=build
 
-BUILD_FLAGS=-lld -vet-shadowing -vet-using-stmt -vet-using-param -vet-style
+BUILD_FLAGS=-lld -vet -vet-using-param -vet-style -vet-cast
 
 .PHONY: run-debug run-release build-release
 
