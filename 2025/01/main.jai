@@ -46,40 +46,35 @@ part2 :: (lines: []string) {
         line.data += 1;
         number, _, _ := str.to_integer(line.*);
 
-        print("% % ", dial, number);
-        print_character(direction);
-        print(" %\n", dial_is_zero_count);
+        // print("% % ", dial, number);
+        // print_character(direction);
+        // print(" %\n", dial_is_zero_count);
 
         if direction == {
-        case #char "L"; dial -= number;
-            // while number > 0 {
-            //     number -= 1;
-            //     dial -= 1;
-            //
-            //     if dial < 0 {
-            //         dial += 100;
-            //         dial_is_zero_count += 1;
-            //     }
-            // }
-        case #char "R"; dial += number;
-            // while number > 0 {
-            //     number -= 1;
-            //     dial += 1;
-            //
-            //     if dial > 99 {
-            //         dial -= 100;
-            //         dial_is_zero_count += 1;
-            //     }
-            // }
-        }
-        // TODO: WTF 5876 ist zu klein?!?!?!?!?!?!?
-        while dial <  0 {
-            dial += 100;
-            dial_is_zero_count += 1;
-        }
-        while dial > 99 {
-            dial -= 100;
-            dial_is_zero_count += 1;
+        case #char "L";
+            while number > 0 {
+                number -= 1;
+                dial -= 1;
+
+                if dial < 0 {
+                    dial += 100;
+                }
+                if dial == 0 {
+                    dial_is_zero_count += 1;
+                }
+            }
+        case #char "R";
+            while number > 0 {
+                number -= 1;
+                dial += 1;
+
+                if dial > 99 {
+                    dial -= 100;
+                }
+                if dial == 0 {
+                    dial_is_zero_count += 1;
+                }
+            }
         }
     }
 
