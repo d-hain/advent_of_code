@@ -21,13 +21,9 @@ part1 :: (lines: []string) {
         line.data += 1;
         number, _, _ := str.to_integer(line.*);
 
-        // print("% % ", dial, number);
-        // print_character(direction);
-        // print("\n");
-
         if direction == {
-        case #char "L"; dial -= number;
-        case #char "R"; dial += number;
+        case "L"; dial -= number;
+        case "R"; dial += number;
         }
         while dial <  0 { dial += 100; }
         while dial > 99 { dial -= 100; }
@@ -46,12 +42,8 @@ part2 :: (lines: []string) {
         line.data += 1;
         number, _, _ := str.to_integer(line.*);
 
-        // print("% % ", dial, number);
-        // print_character(direction);
-        // print(" %\n", dial_is_zero_count);
-
         if direction == {
-        case #char "L";
+        case "L";
             while number > 0 {
                 number -= 1;
                 dial -= 1;
@@ -63,7 +55,7 @@ part2 :: (lines: []string) {
                     dial_is_zero_count += 1;
                 }
             }
-        case #char "R";
+        case "R";
             while number > 0 {
                 number -= 1;
                 dial += 1;
