@@ -1,5 +1,6 @@
 #import "Basic";
 #import "File";
+#import "Deep_Copy";
 str :: #import "String";
 
 main :: () {
@@ -36,8 +37,7 @@ part2 :: (input: []string) {
     width := lines[0].count;
 
     removed_smth := true;
-    new_lines := array_copy(lines);
-    for * new_lines it.* = copy_string(it.*);
+    new_lines := Deep_Copy(*lines, New(Deep_Copy_Config));
     while removed_smth {
         removed_smth = false;
         for y: 0..height - 1 {
@@ -47,15 +47,15 @@ part2 :: (input: []string) {
                 if count_neighbours(lines, y, x) < 4 {
                     removeable_paper_rolls_count += 1;
                     removed_smth = true;
-                    new_lines[y][x] = "x";
+                    new_lines.*[y][x] = "x";
                 }
             }
         }
 
         // print_grid(new_lines);
         // print("\n");
-        for * new_lines it.* = str.replace(it.*, "x", ".");
-        lines = new_lines;
+        for * new_lines.* it.* = str.replace(it.*, "x", ".");
+        lines = new_lines.*;
     }
 
     print("% total rolls of paper can be removed by a forklift.\n", removeable_paper_rolls_count);
