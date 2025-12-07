@@ -123,11 +123,3 @@ parse_symbols :: (line: *string, calculations: *[..]Calculation) {
         }
     }
 }
-
-char_to_string :: (char: u8) -> string {
-    s: string;
-    s.count = 1;
-    s.data = alloc(1);
-    s[0] = char;
-    return s;
-}
