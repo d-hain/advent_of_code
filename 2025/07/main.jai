@@ -3,14 +3,14 @@
 str :: #import "String";
 
 main :: () {
-    // input := read_entire_file("./example.txt");
-    input := read_entire_file("./input.txt");
+    input := read_entire_file("./example.txt");
+    // input := read_entire_file("./input.txt");
     lines := str.split(input, "\n");
     lines.count -= 1;
     lines2 := array_copy(lines);
 
-    part1(lines);
-    // part2(lines2);
+    // part1(lines);
+    part2(lines2);
 }
 
 part1 :: (lines: []string) {
@@ -50,12 +50,36 @@ part1 :: (lines: []string) {
         }
     }
 
-    for lines print("%\n", it);
     print("The beam was split % times.\n", split_count);
 }
 
 part2 :: (lines: []string) {
-
+    // height := lines.count - 1;
+    // width := lines[0].count - 1;
+    //
+    // timeline_count := 0;
+    // for y: 0..height {
+    //     for x: 0..width {
+    //         char := lines[y][x];
+    //         if char == "^" {
+    //             if y - 1 >= 0 && lines[y - 1][x] != "|" then continue;
+    //             if x - 1 >= 0 && lines[y][x - 1] == "." then lines[y][x - 1] = "|";
+    //         }
+    //     }
+    //
+    //     for x: 0..width {
+    //         char := lines[y][x];
+    //
+    //         if char == {
+    //         case "S"; #through;
+    //         case "|";
+    //             if y + 1 > height then timeline_count += 1;
+    //             else if lines[y + 1][x] == "." then lines[y + 1][x] = "|";
+    //         }
+    //     }
+    // }
+    //
+    // for lines print("%\n", it);
 }
 
 char_to_string :: (char: u8) -> string {
